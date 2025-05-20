@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Dívidas</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <h2 class="mb-4">💸 Lista de Dívidas do Mês</h2>
+            <!-- Formulário -->
+
+            <form id="debtForm" class="row g-3">
+                <div class="col-md-4">
+                    <input type="text"  id="descricao" class="form-control" placeholder="Descrição" required>
+                </div> 
+                
+                <div class="col-md-2">
+                    <input type="number"  id="valor" class="form-control" placeholder="Valor (R$)" required>
+                </div>
+
+                <div class="col-md-2">
+                    <select  id="mes" required>
+                        <option value="">Mês</option>
+                            <option value="Janeiro">Janeiro</option>
+                            <option value="Fevereiro">Fevereiro</option>
+                            <option value="Março">Março</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Maio">Maio</option>
+                            <option value="Junho">Junho</option>
+                            <option value="Julho">Julho</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Setembro">Setembro</option>
+                            <option value="Outubro">Outubro</option>
+                            <option value="Novembro">Novembro</option>
+                            <option value="Dezembro">Dezembro</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <input type="number"  id="ano" class="form-control" placeholder="Ano" required>
+                </div>
+
+                <div class="col-md-2 d-grid">
+                    <button type="submit" class="btn btn-primary">Adicoinar</button>
+                </div>
+            </form>
+
+
+            <!-- Tabela -->
+             <div class="table-responsive mt-4">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                           <th>Descrição</th>
+                            <th>Valor (R$)</th>
+                            <th>Mês</th>
+                            <th>Ano</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaDividas"></tbody>
+                </table>
+             </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
